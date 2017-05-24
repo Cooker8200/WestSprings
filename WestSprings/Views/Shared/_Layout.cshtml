@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - West Springs Church</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <script type = 'text/javascript' >
+        var appInsights=window.appInsights||function(config)
+        {
+            function r(config){ t[config] = function(){ var i = arguments; t.queue.push(function(){ t[config].apply(t, i)})} }
+            var t = { config:config},u=document,e=window,o='script',s=u.createElement(o),i,f;for(s.src=config.url||'//az416426.vo.msecnd.net/scripts/a/ai.0.js',u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=['Event','Exception','Metric','PageView','Trace','Ajax'];i.length;)r('track'+i.pop());return r('setAuthenticatedUserContext'),r('clearAuthenticatedUserContext'),config.disableExceptionTracking||(i='onerror',r('_'+i),f=e[i],e[i]=function(config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t['_' + i](config, r, u, e, o),s}),t
+        }({
+            instrumentationKey:'1e6e446a-4d30-4ac7-b196-3d488d227fa1'
+        });
+        
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script>
+</head>
+<body>
+
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{<div id="nav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <img id="headpic" src="~/Images/West Springs Cross.png" />
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("West Springs Church", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Start</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Statements", "Statements", "Home")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Connect</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Our Ministries", "Ministries", "Home")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Online Sermons", "Sermons", "Home")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Contact Us", "Contact", "Contact")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Serve</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Ongoing Opporitunities", "OngoingOpp", "Home")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Give", "Give", "Home")</li>
+                    <li>@Html.ActionLink("Calendar", "ComingSoon", "Home")</li>
+                    <li>@Html.ActionLink("Directory", "Index", "Directories")</li>
+
+                </ul>
+
+
+                @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+                @*<li>@Html.ActionLink("Start", "About", "Home")</li>*@
+                @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+
+                @Html.Partial("_LoginPartial")
+
+                
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer id="foot">
+            <div>
+                &copy; @DateTime.Now.Year - 2016 West Springs Church | 501 Big Bend Rd, Ballwin, MO, 63021 | 636.394.7100
+
+                <a href="https://www.facebook.com/WestSpringsChurchSTL/"> <img id="facebook" src="~/Images/facebook.png" /> </a>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false) }
+else
+{
+    <div id="nav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <img id="headpic" src="~/Images/West Springs Cross.png" />
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("West Springs Church", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Start</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Statements", "Statements", "Home")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Connect</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Our Ministries", "Ministries", "Home")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Online Sermons", "Sermons", "Home")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Contact Us", "Contact", "Contact")</li>
+                            </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Serve</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Ongoing Opporitunities", "OngoingOpp", "Home")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Give", "Give", "Home")</li>
+                    <li>@Html.ActionLink("Calendar", "#", "#")</li>
+                    </ul>
+                        
+                
+                            @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+                            @*<li>@Html.ActionLink("Start", "About", "Home")</li>*@
+                            @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@        
+                        
+                @Html.Partial("_LoginPartial")
+
+                @*<a href="https://www.facebook.com/WestSpringsChurchSTL/"> <img id="facebook" src="~/Images/facebook.png" /> </a>*@
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" id="body">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div>
+                &copy; @DateTime.Now.Year - West Springs Church | 501 Big Bend Rd, Ballwin, MO, 63021 | 636.394.7100
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+}
+</body>
+</html>

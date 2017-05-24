@@ -1,0 +1,407 @@
+﻿body {
+
+}
+
+#foot {
+    position: fixed;
+    bottom: 0px;
+    width: 97%;
+
+}
+
+footer {
+    /*position: relative;*/
+    bottom: 0px;
+}
+
+#headpic {
+    margin-top: .5%;
+    float: left;
+}
+
+#slideshow {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.slide {
+   width: 75%;
+   height: 75%;
+   position: absolute;
+   border: 10px solid whitesmoke;
+   border-radius: 5px;
+   /*margin-left: 5%;*/
+   /*margin-right: 5%;*/
+}
+
+/*.slide img {
+    width: auto;
+    height: auto;
+}*/
+
+/*.motto{
+    text-align: center;
+    z-index: 1000;
+}*/
+
+#motto {
+    width: 40%;
+    height: 40%;
+    
+}
+
+#facebook {
+    float: right;
+    height: auto;
+    width: auto;
+    max-height: 3em;
+    margin-top: -25%;
+}
+
+#history {
+    padding-top: 8%;
+    text-align: center;
+    font-size: 36px;
+    background: darkblue;
+    color: white;
+}
+
+#break {
+    height: 2em;
+    width: 100% !important;
+    color: #000066;
+    background: darkblue;
+
+}
+
+#head {
+    text-align: center;
+    color: #0000b3;
+    font-size: 36px;
+    font-family: Calibri;
+    font-weight: bold;
+}
+
+#aboutbottom {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+
+.abouthead {
+    text-align: center;
+    font-family: cursive;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+}
+
+#aboutlist {
+    font-weight: bold;
+    padding-left: 10%;
+    color: darkblue;
+}
+
+#statements {
+    background: #000066;
+    height: 15em;
+}
+
+#statement {
+    text-align: left;
+    margin-left: 20%;
+    margin-bottom: 3%;
+    color: white;
+    margin-top: -1%;
+    font-size: 4em;
+}
+
+#mission {
+    text-align: left;
+    margin-left: 17%;
+    color: #e6e600;
+    padding-top: 4%;
+    font-size: 4em;
+}
+
+.ministries {
+    margin-top: 3%;
+    display: inline;
+    list-style-type: none;
+    padding: 3%;
+    color: black;
+    font-family: Calibri;
+    font-size:14px;
+    background: white;
+    border-radius: 10%;
+    text-align: center;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+}
+
+.state {
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 2em;
+}
+
+#our {
+    color: #e6e600;
+    display: inline;
+    list-style-type: none;
+}
+
+#mission1 {
+    display: inline;
+    list-style-type: none;
+    color: white;
+
+}
+
+.minihead {
+    color: darkblue;
+    text-align: center;
+    text-shadow: 2px 2px 2px #e6e600;
+    font-size: 3em;
+    
+}
+
+.ages {
+    list-style-type: none;
+}
+
+.ministriespic {
+    text-align: center;
+}
+
+.backtotop {
+    text-align: center;
+    padding: 2px;
+}
+
+#sermoncloud {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+.give {
+    border: .1em solid black;
+    color: black;
+    font-size: 24px;
+    padding: 2px;
+
+}
+
+.give:hover {
+    color: #e6e600;
+    border: solid .1em #e6e600;
+    /*color: #808000;*/  
+    /*border-radius: 10%;*/
+    text-decoration:none;
+}
+
+#given {
+    text-align: center;
+    padding: 2%;
+    letter-spacing: .1em;
+    margin-top: 5%;
+}
+.opphead {
+    color: #000066;
+    text-decoration: wavy;
+    font-weight: bold;
+}
+
+#directory {
+
+}
+
+#programs {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+}
+
+#detials1 {
+
+}
+
+#details2 {
+
+}
+
+#details3 {
+
+}
+
+#minipic {
+    height: 50%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#body {
+    width: 100%;
+    height: 100%;
+    background: #e6e6e6;
+}
+
+#background {
+    background: url(../Images/background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#backgroundhome {
+    background: url(../Images/background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 175em;
+}
+
+#churchhistory {
+    color: black;
+    padding: 5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*#clouds {
+    width: 100%;
+    height: 100;
+}*/
+
+#statementhead {
+    width: 100%;
+    height: 100%;
+    background: url(../Images/mission.jpg);
+    background-size: cover;
+}
+
+#sermonheader {
+    width: 100%;
+    height: 250px;
+    background: url(../Images/bible.jpg);
+    background-size: cover;
+}
+
+#biblehead {
+    text-align: center;
+    font-size: 4em;
+
+}
+
+#nav {
+    border: 5px solid black;
+}
+
+#ministry {
+    background: gray;
+    height: 25em;
+
+}
+
+#ministryheadpic {
+    height: 100%;
+}
+
+#kids, #wired, #women, #men {
+    /*height: 10em;*/
+    /*background: url(../Images/background.jpg);*/
+    background-size: cover;
+    width: 100%;
+    margin-bottom: 3%;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.minip {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+#minicont {
+    background: white;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin-top: 10%;
+}
+
+#totop {
+    text-align: center;
+    color: #000066;
+}
+
+#main2 {
+    padding-top: 35%;
+
+}
+
+#main3 {
+    margin-top: 15%;
+}
+
+#main4 {
+    margin-top: 15%;
+}
+
+.ministrieshome {
+    margin-top: 3%;
+    display: inline;
+    list-style-type: none;
+    padding: 3%;
+    color: black;
+    font-family: Calibri;
+    font-size:14px;
+    background: white;
+    border-radius: 10%;
+    text-align: center;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    width: 50%;
+}
+
+#given2 {
+    text-align: center;
+    padding: 2%;
+    letter-spacing: .1em;
+    margin-top: 5%;
+    background: white;
+    border-radius: 100px;
+    opacity: .95;
+}
+
+.ongoingp {
+    font-size: 16px;
+    color: black;
+}
+
+.homemini {
+    font-family: cursive;
+    font-weight: bold;
+}
+
+#programshome {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+    margin-top: 15%;
+}

@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "West Springs Church";
+}
+<div id="backgroundhome">
+    <div id="slideshow" class="container">
+
+        <div><img class="slide" src="~/Images/WS Main 1.jpg" /></div>
+
+        <div><img class="slide" src="~/Images/WS Main 2.jpg" /></div>
+
+        <div><img class="slide" src="~/Images/WS Main 3.jpg" /></div>
+
+        
+    </div>
+
+    @*<div class="col-md-12"><img id="motto" src="~/Images/WS Motto.png" /></div>*@
+    
+
+    <div id="main2">
+        <div class="col-md-6" id="given2">
+            <h3>ABOUT US</h3>
+            <p>
+                We Want to be a Real. Simple. Church.
+            </p>
+            <br />
+            <br />
+            <a class="give" @Html.ActionLink("Learn More", "About", "Home")</a>
+        </div>
+
+        <div class="col-md-6" id="given2">
+            <h3>MISSION & VISION Statements</h3>
+            <p>West Springs Church is a praying church, reaching to our city and beyond, by serving 
+            those far from God with friendship, love and the gospel of Jesus, in the power of the Holy Spirit.</p>
+            <br />
+            <a class="give" @Html.ActionLink("Learn More", "Statements", "Home")</a>
+            <br />
+        </div>
+    </div>
+
+    <div id="main3">
+        <ul id="programshome">
+            <li class="ministrieshome"><a href="#kids"> <b>Kids Contruction Company</b><img src="~/Images/kids.png" /></a>
+            <hr />
+            <p class="homemini">Our children's ministry aspires to show the love of God to every child in KCC</p></li>
+            <li class="ministrieshome"><a href="#wired"> <b>WIRED Student Ministries</b><img src="~/Images/wired.png" /></a>
+            <hr />
+            <p class="homemini">WIRED Student Ministry exists to provide a safe, and fun place where Jr. High and High School students know and
+            grow in Christ.</p></li>
+            <li class="ministrieshome"><a href="#women"> <b>Women of the Word (W.O.W.)</b><img src="~/Images/wow.png" /></a>
+            <hr />
+            <p class="homemini">The W.O.W Ministry welcomes all women to participate in our various programs and special events.</p></li>
+            <li class="ministrieshome"><a href="#men"> <b>West Springs Men's Ministry</b><img src="~/Images/mens.png" /></a>
+            <hr />
+            <p class="homemini">This is a growing group of Men wanting to come together to support one another as we learn to be...</p></li>
+        </ul>
+    </div>
+
+    <div id="main4">
+        <div class="col-md-6" id="given2">
+            <h3>SERVE</h3>
+            <p>
+                At West Springs Church, we want to include you in some of our amazing opportunities to share kindness, love and the 
+                Gospel with the world around us.
+            </p>
+            <a class="give" @Html.ActionLink("Learn More", "OngoingOpp", "Home")</a>
+        </div>
+
+        <div class="col-md-6" id="given2">
+            <h3>GIVE</h3>
+            <p>Join us on our mission to help others grow in Christ.</p>
+            <br />
+            <a class="give" href="https://pushpay.com/pay/westspringschurch/pF2iIOFNI1CnlLLxiS6dZQ">Donate</a>
+            <br />
+        </div>
+    </div>
+    
+
+</div>
+
+<script>
+    onLoad = console.log('Page One');
+    //onLoad = document.getElementById('foot').style.position.fixed;
+    //onLoad = document.getElementById('foot').style.zIndex = 1000;
+    //onLoad = document.getElementById('foot').style.bottom = '0px';
+</script>

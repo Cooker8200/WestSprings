@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Give";
+}
+
+    <div id="statements">
+        <ul style="text-align:center; padding-top:4%; font-size:4em;">
+            <li id="our">How</li>
+            <li id="mission1">To Give</li>
+        </ul>
+    </div>
+
+    <div class="col-md-6" id="given">
+        <h3>SERVE</h3>
+        <p>
+            At West Springs Church, we want to include you in some of our amazing opporitunities to share kindness,
+            love and the Gospel with the world around us
+        </p>
+        <a class="give" @Html.ActionLink("Learn More", "OngoingOpp", "Home")</a>
+    </div>
+
+    <div class="col-md-6" id="given">
+        <h3>GIVE</h3>
+        <p>Join us on our mission to help others grow in Christ.</p>
+        <br />
+        <a class="give" href="https://pushpay.com/pay/westspringschurch/pF2iIOFNI1CnlLLxiS6dZQ">Donate</a>
+        <br />
+    </div>
+<div class="col-md-12" style="height: 20em;"></div>
+
+@*<script>
+    onLoad = document.getElementById('background').style.background = '!important';
+</script>*@
+
+

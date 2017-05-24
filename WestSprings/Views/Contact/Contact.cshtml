@@ -1,0 +1,81 @@
+﻿@model WestSprings.Models.WSContact
+
+
+@{
+    ViewBag.Title = "Contact Us";
+}
+
+<h2>Need to get in Touch?</h2>
+
+<div>
+    @using (Html.BeginForm("ContactForm", "Contact", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Send us a message</h4>
+            @*@Html.LabelFor(m => m.Sendto, new { @class = "col-lg-2 control-label"})*@
+            
+        <br />
+        <br />
+        <hr />
+           <div class="form-group">
+            <label for="Sendto" class="col-lg-2 control-label">Send To</label>
+            <div class="col-lg-10">
+                <select class="form-control" id="select">
+                    <option id="TimM" title="Senior Paster">Tim McDonnell</option>
+                    <option id="Justin" title="Associate/Youth Paster">Justin Brunk</option>
+                    <option id="Dan" title="Worship Experience Team Coordinator">Dan Keehnast</option>
+                    <option id="Gloria" title="Director of Kids Construction Company">Gloria McDonnell</option>
+                    <option id="TimT" title="Coordinator of Discipleship Ministries">Tim Thompson</option>
+                    <option id="Carol" title="W.O.W. Team Administrator">Carol Varner</option>
+                    <option id="Ryan" title="Director of Church Engagement">Ryan McDonnell</option>
+                    <option id="Elders" title="Elder of West Springs">Elders of West Springs</option>
+                </select>
+                </div>
+            </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-lg-2 control-label" })
+                    <div class="col-lg-10">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Email)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Name, new { @class = "col-lg-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Name)
+                    </div>
+                </div>
+                <div class="form-group" style="resize:both;">
+                    @Html.LabelFor(m => m.Message, new { @class = "col-lg-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Message, new { @class = "form-control"})
+                        @Html.ValidationMessageFor(m => m.Message)
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="reset" class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+
+
+    }
+            </div>
+
+<div id="contact">
+    <h5>Send us a Letter</h5>
+    <address>
+        501 Big Bend Road<br />
+        Ballwin, MO 630d1<br />
+    </address>
+    <hr />
+    <h5>Call Us</h5>
+    <p>636.394.7100</p>
+</div>
+
+<script>
+    document.getElementById('body').style.background = 'none';
+</script>
