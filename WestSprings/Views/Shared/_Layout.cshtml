@@ -68,27 +68,17 @@
 
                 </ul>
 
-
-                @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
-                @*<li>@Html.ActionLink("Start", "About", "Home")</li>*@
-                @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-
                 @Html.Partial("_LoginPartial")
-
-                
-
 
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content" id="body">
         @RenderBody()
         <hr />
-        <footer id="foot">
+        <footer>
             <div>
                 &copy; @DateTime.Now.Year - 2016 West Springs Church | 501 Big Bend Rd, Ballwin, MO, 63021 | 636.394.7100
-
-                <a href="https://www.facebook.com/WestSpringsChurchSTL/"> <img id="facebook" src="~/Images/facebook.png" /> </a>
             </div>
         </footer>
     </div>
@@ -138,22 +128,13 @@ else
                     </li>
                     <li>@Html.ActionLink("Give", "Give", "Home")</li>
                     <li>@Html.ActionLink("Calendar", "ComingSoon", "Home")</li>
-                    </ul>
-                        
-                
-                            @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
-                            @*<li>@Html.ActionLink("Start", "About", "Home")</li>*@
-                            @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@        
+                    </ul>   
                         
                 @Html.Partial("_LoginPartial")
-
-                @*<a href="https://www.facebook.com/WestSpringsChurchSTL/"> <img id="facebook" src="~/Images/facebook.png" /> </a>*@
-
-
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content" id="body">
         @RenderBody()
         <hr />
         <footer>

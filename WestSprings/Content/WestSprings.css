@@ -2,13 +2,6 @@
 
 }
 
-#foot {
-    position: fixed;
-    bottom: 0px;
-    width: 97%;
-
-}
-
 footer {
     /*position: relative;*/
     bottom: 0px;
@@ -251,9 +244,10 @@ footer {
 }
 
 #body {
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     background: #e6e6e6;
+   
 }
 
 #background {
