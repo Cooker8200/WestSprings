@@ -4,7 +4,7 @@
     ViewBag.Title = "Online Directory";
 }
 
-<h4>Online Directory</h4>
+<h3 style="text-align: center;">Online Directory</h3>
 <hr />
 <div class="col-md-6" id="detials1">
     <dl class="dl-horizontal">
@@ -108,9 +108,9 @@
             @Html.DisplayNameFor(model => model.childbirthday)
         </dt>
 
-        @*<dd>
+        <dd>
             @Html.DisplayFor(model => model.childbirthday)
-        </dd>*@
+        </dd>
     </dl>
 </div>
 <br />
@@ -123,9 +123,11 @@
 <br />
 <br />
 <br />
-<p>
+<p class="col-md-12" style="text-align: center; font-weight: bold;">
     @*@Html.ActionLink("Edit", "Edit", new { id = Model.memberid }) |*@
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Directory Home", "Index")
 </p>
 
-
+<script>
+    onLoad = document.getElementById('body').style.background = '#ffffff';
+</script>

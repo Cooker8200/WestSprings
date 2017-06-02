@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using WestSprings.Models;
+//using static WestSprings.Models.DirectoryList;
 
 namespace WestSprings.Controllers
 {
@@ -23,7 +24,25 @@ namespace WestSprings.Controllers
             return View();
         }
 
-        [HttpPost]
+    //    public ActionResult Sent()
+    //    {
+    //        return View();
+    //    }
+
+    //    public ActionResult Sending()
+    //    {
+    //        Sendto model = new Sendto();
+    //        IEnumerable<Leadership> actionTypes = Enum.GetValues(typeof(Leadership)).Cast<Leadership>();
+    //        model.Sendtolist = from action in Leadership
+    //                           select new SelectListItem
+    //                           {
+    //                               Text = action.ToString();
+    //                               Value = ((int)action).ToString()
+    //                           };
+    //    return View(model);
+    //    }
+
+    [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ContactForm(WSContact model)
         {
@@ -32,8 +51,7 @@ namespace WestSprings.Controllers
             {
                 var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
                 var message = new MailMessage();
-                var sendto = model.Sendto;
-                message.To.Add(new MailAddress(" "));  //change before live
+                message.To.Add(new MailAddress(Leadership.cooker8200+"@hotmail.com"));  //change before live
                 message.From = new MailAddress("cooker8200@hotmail.com");  //change before live
                 message.Subject = "West Springs Contact";
                 message.Body = string.Format(body, model.Email, model.Name, model.Message);
@@ -44,7 +62,7 @@ namespace WestSprings.Controllers
                     var credential = new NetworkCredential
                     {
                         UserName = "Cooker8200@hotmail.com", //delete before live
-                        Password = "MATTcook82189804!" //delete before live
+                        Password = "MATTcook82189804" //delete before live
                     };
                     smtp.Credentials = credential;
                     smtp.Host = "smtp-mail.outlook.com";  //change to correct value

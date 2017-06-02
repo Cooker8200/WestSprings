@@ -85,3 +85,4 @@ C:\Users\Jennifer\Desktop\WestSprings\WestSprings\bin\Serilog.xml
 C:\Users\Jennifer\Desktop\WestSprings\WestSprings\obj\Debug\WestSprings.Migrations.InitialCreate.resources
 C:\Users\Jennifer\Desktop\WestSprings\WestSprings\obj\Debug\WestSprings.csproj.GenerateResource.Cache
 C:\Users\Jennifer\Desktop\WestSprings\WestSprings\obj\Debug\WestSprings.Migrations.directorychanges.resources
+C:\Users\Jennifer\Desktop\WestSprings\WestSprings\obj\Debug\WestSprings.Migrations.addmigration.resources

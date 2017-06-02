@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
+//using static WestSprings.Models.DirectoryList;
 
 namespace WestSprings.Models
 {
@@ -10,7 +12,7 @@ namespace WestSprings.Models
     {
         [Required]
         [Display(Name = "Send To")]
-        public Leadership Sendto { get; set; }
+        public List<Leadership> Sendto { get; set; }
         [Required]
         [Display(Name="Your Email")]
         [EmailAddress]
@@ -21,12 +23,13 @@ namespace WestSprings.Models
         [Required]
         [Display(Name="Your Message")]
         public string Message { get; set; }
+
     }
 
 
     public enum Leadership
     {
-        
+        SendTo,
         [Display(Name = "Tim McDonnell")]
         TimMcDonnell,
         [Display(Name = "Justin Brunk")]
@@ -42,8 +45,23 @@ namespace WestSprings.Models
         [Display(Name = "Ryan McDonnell")]
         RyanMcDonnell,
         [Display(Name = "Elders of West Springs")]
-        EldersofWS
+        EldersofWS,
+        [Display(Name = "Matt")]
+        cooker8200
 
     }
+
+    //public class Sendto
+    //{
+    //    public Sendto()
+    //    {
+    //        Sendtolist = new List<SelectListItem>();
+
+    //    }
+
+    //    [Display(Name = "Send To")]
+    //    public int Sendid { get; set; }
+    //    public IEnumerable<SelectListItem> Sendtolist { get; set; }
+    //}
 
 }

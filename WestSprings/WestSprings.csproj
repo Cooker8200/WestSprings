@@ -216,6 +216,10 @@
     <Compile Include="Migrations\201705191544402_directory changes.Designer.cs">
       <DependentUpon>201705191544402_directory changes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705251601366_add migration.cs" />
+    <Compile Include="Migrations\201705251601366_add migration.Designer.cs">
+      <DependentUpon>201705251601366_add migration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Directory.cs" />
@@ -321,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705191544402_directory changes.resx">
       <DependentUpon>201705191544402_directory changes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705251601366_add migration.resx">
+      <DependentUpon>201705251601366_add migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

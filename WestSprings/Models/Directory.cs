@@ -33,7 +33,7 @@ namespace WestSprings.Models
         public string anniversary { get; set; }
         [Display(Name = "Children")]
         public string children { get; set; }
-        [Display(Name = "Birthday")]
+        [Display(Name = "Children Birthday")]
         public string childbirthday { get; set; }
 
     }

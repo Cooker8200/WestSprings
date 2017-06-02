@@ -3,19 +3,19 @@
 @{
     ViewBag.Title = "Online Directory";
 }
-<h3>West Springs Directory</h3>
+<h3 style="text-align: center; margin-bottom:5%;">West Springs Directory</h3>
 
 @using Microsoft.AspNet.Identity
 @if (Request.IsAuthenticated) { }
 @*<p>
     @Html.ActionLink("Create New", "Create")
 </p>*@
-<table class="col-md-6">
+<table class="col-md-4" id="indextable">
     <tr>
-        <th>
+        <th id="tablelable">
             @Html.DisplayNameFor(model => model.firstname)
         </th>
-        <th>
+        <th id="tablelable2">
             @Html.DisplayNameFor(model => model.lastname)
         </th>
         @*<th>
@@ -38,10 +38,10 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td id="indexfirstname">
             @Html.DisplayFor(modelItem => item.firstname)
         </td>
-        <td>
+        <td id="indexlastname">
             @Html.DisplayFor(modelItem => item.lastname)
         </td>
         @*<td>
@@ -70,4 +70,9 @@
 </table>
 
 <img id="minipic" src="~/Images/ws mini.jpg" />
+
+<script>
+    onLoad = document.getElementById('body').style.background = '#ffffff';
+    onLoad = document.getElementById('tablelabel').style.color = 'black';
+</script>
 

@@ -4,8 +4,8 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
-<h4>Directory</h4>
+<h3 style="text-align: center;">Delete</h3>
+<h4 style="text-align: center;">Directory</h4>
 <hr />
 <h3>Are you sure you want to delete this?</h3>
 <div class="col-md-6" id="detials1">
@@ -119,9 +119,13 @@
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+        <div class="col-md-12" style="text-align: center; font-weight: bold;">
+            <input type="submit" value="Delete" class="btn btn-danger" /> | 
+            @Html.ActionLink("Directory Home", "Index")
         </div>
     }
 </div>
+
+<script>
+    onLoad = document.getElementById('body').style.background = '#ffffff';
+</script>

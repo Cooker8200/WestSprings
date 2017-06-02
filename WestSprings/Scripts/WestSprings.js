@@ -19,4 +19,8 @@ function parallax() {
 
 $(window).scroll(function (e) {
     parallax();
-})  
+})
+
+//$(document).ready(function () {
+//    $("#indextable").
+//})
