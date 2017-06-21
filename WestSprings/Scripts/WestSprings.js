@@ -14,12 +14,13 @@ setInterval(function () {
 function parallax() {
     var scrolled = $(window).scrollTop();
     $('#background').css('top', -(scrolled * 2) + 'px');
-    $('#programs').css('top', -(scrolled * 0.2) + 'px')
+    $('#programs').css('top', -(scrolled * 0.2) + 'px');
 }
 
 $(window).scroll(function (e) {
     parallax();
 })
+
 
 //$(document).ready(function () {
 //    $("#indextable").

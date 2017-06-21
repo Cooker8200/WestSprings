@@ -10,9 +10,18 @@ namespace WestSprings.Models
 {
     public class WSContact
     {
-        [Required]
+        public WSContact()
+        {
+            SendToAddresses = new List<SelectListItem>();
+
+        }
+
         [Display(Name = "Send To")]
-        public List<Leadership> Sendto { get; set; }
+        public int SendToAddressId { get; set; }
+        public IEnumerable<SelectListItem> SendToAddresses { get; set; }
+        //[Required]
+        //[Display(Name = "Send To")]
+        //public List<Leadership> SendToAdmin { get; set; }
         [Required]
         [Display(Name="Your Email")]
         [EmailAddress]
@@ -46,22 +55,13 @@ namespace WestSprings.Models
         RyanMcDonnell,
         [Display(Name = "Elders of West Springs")]
         EldersofWS,
-        [Display(Name = "Matt")]
-        cooker8200
+        
 
     }
 
-    //public class Sendto
-    //{
-    //    public Sendto()
-    //    {
-    //        Sendtolist = new List<SelectListItem>();
-
-    //    }
-
-    //    [Display(Name = "Send To")]
-    //    public int Sendid { get; set; }
-    //    public IEnumerable<SelectListItem> Sendtolist { get; set; }
-    //}
+    public class SendToAddress
+    {
+        
+    }
 
 }

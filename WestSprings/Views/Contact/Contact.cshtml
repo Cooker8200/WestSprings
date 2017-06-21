@@ -15,30 +15,12 @@
     {
         @Html.AntiForgeryToken()
 
-        @*<div class="form-group">
+        <div class="form-group">
             @Html.LabelFor(m => m.Email, new { @class = "col-lg-2 control label" })
             <div class="col-lg-10">
-                @Html.DropDownList("Leadership", " ", IEnumberable<Leadership>,)
-                @Html.ValidationMessageFor(m => m.Sendto)
+                @Html.DropDownListFor(m => m.SendToAddressId, Model.SendToAddresses)
             </div>
-            </div>*@
-        
-           <div class="form-group">
-            <label for="Sendto" class="col-lg-2 control-label">Send To</label>
-            <div class="col-lg-10">
-                <select class="form-control" id="select">
-                    <option id="timmcdonnell" title="Senior Paster">Tim McDonnell</option>
-                    <option id="justinbrunk" title="Associate/Youth Paster">Justin Brunk</option>
-                    <option id="dankeehast" title="Worship Experience Team Coordinator">Dan Keehnast</option>
-                    <option id="gloriamcdonnell" title="Director of Kids Construction Company">Gloria McDonnell</option>
-                    <option id="timthompson" title="Coordinator of Discipleship Ministries">Tim Thompson</option>
-                    <option id="carolvarner" title="W.O.W. Team Administrator">Carol Varner</option>
-                    <option id="ryanmcdonnell" title="Director of Church Engagement">Ryan McDonnell</option>
-                    <option id="cooker8200" title="Elder of West Springs">Elders of West Springs</option>
-                </select>
-                </div>
             </div>
-
                 <div class="form-group">
                     @Html.LabelFor(m => m.Email, new { @class = "col-lg-2 control-label" })
                     <div class="col-lg-10">
@@ -64,7 +46,7 @@
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <button type="reset" class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" id="contactsubmit">Submit</button>
                     </div>
                 </div>
 

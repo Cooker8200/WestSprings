@@ -16,7 +16,16 @@ namespace WestSprings.Controllers
         //GET: Contact
         public ActionResult Contact()
         {
-            return View();
+            WSContact model = new WSContact();
+            IEnumerable<Leadership> admins = Enum.GetValues(typeof(Leadership)).Cast<Leadership>();
+            model.SendToAddresses = from admin in admins
+                                    select new SelectListItem
+                                    {
+                                        Text = admin.ToString(),
+                                        Value = ((int)admin).ToString()
+                                    };
+            return View(model);
+
         }
 
         public ActionResult NotSent()
@@ -24,23 +33,23 @@ namespace WestSprings.Controllers
             return View();
         }
 
-    //    public ActionResult Sent()
-    //    {
-    //        return View();
-    //    }
+        public ActionResult Sent()
+        {
+            return View();
+        }
 
-    //    public ActionResult Sending()
-    //    {
-    //        Sendto model = new Sendto();
-    //        IEnumerable<Leadership> actionTypes = Enum.GetValues(typeof(Leadership)).Cast<Leadership>();
-    //        model.Sendtolist = from action in Leadership
-    //                           select new SelectListItem
-    //                           {
-    //                               Text = action.ToString();
-    //                               Value = ((int)action).ToString()
-    //                           };
-    //    return View(model);
-    //    }
+        public ActionResult SendTo()
+        {
+            WSContact model = new WSContact();
+            IEnumerable<Leadership> admins = Enum.GetValues(typeof(Leadership)).Cast<Leadership>();
+            model.SendToAddresses = from admin in admins
+                                    select new SelectListItem
+                                    {
+                                        Text = admin.ToString(),
+                                        Value = ((int)admin).ToString()
+                               };
+        return View("Contact", model);
+    }
 
     [HttpPost]
         [ValidateAntiForgeryToken]
@@ -51,8 +60,9 @@ namespace WestSprings.Controllers
             {
                 var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
                 var message = new MailMessage();
-                message.To.Add(new MailAddress(Leadership.cooker8200+"@hotmail.com"));  //change before live
-                message.From = new MailAddress("cooker8200@hotmail.com");  //change before live
+                var address = ((Leadership)Enum.ToObject(typeof(Leadership), model.SendToAddressId)).ToString();
+                message.To.Add(new MailAddress(address +"@hotmail.com"));  
+                message.From = new MailAddress(" ");  
                 message.Subject = "West Springs Contact";
                 message.Body = string.Format(body, model.Email, model.Name, model.Message);
                 message.IsBodyHtml = true;
@@ -61,11 +71,11 @@ namespace WestSprings.Controllers
                 {
                     var credential = new NetworkCredential
                     {
-                        UserName = "Cooker8200@hotmail.com", //delete before live
-                        Password = "MATTcook82189804" //delete before live
+                        UserName = " ", 
+                        Password = " " 
                     };
                     smtp.Credentials = credential;
-                    smtp.Host = "smtp-mail.outlook.com";  //change to correct value
+                    smtp.Host = "smtp-mail.outlook.com";  
                     smtp.Port = 587;
                     smtp.EnableSsl = true;
                     await smtp.SendMailAsync(message);
