@@ -13,6 +13,11 @@ namespace WestSprings.Controllers
             return View();
         }
 
+        public ActionResult test()
+        {
+            return PartialView("_test");
+        }
+
         public ActionResult About()
         {
 
