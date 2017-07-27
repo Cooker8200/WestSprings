@@ -237,6 +237,26 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\background.jpg" />
+    <Content Include="Images\bible.jpg" />
+    <Content Include="Images\comingsoon.jpg" />
+    <Content Include="Images\facebook.png" />
+    <Content Include="Images\home\kids.png" />
+    <Content Include="Images\home\men.png" />
+    <Content Include="Images\home\wired.png" />
+    <Content Include="Images\home\women.png" />
+    <Content Include="Images\kids.png" />
+    <Content Include="Images\mens.png" />
+    <Content Include="Images\ministries.png" />
+    <Content Include="Images\mission.jpg" />
+    <Content Include="Images\West Springs Cross.png" />
+    <Content Include="Images\wired.png" />
+    <Content Include="Images\wow.png" />
+    <Content Include="Images\WS Main 1.jpg" />
+    <Content Include="Images\WS Main 2.jpg" />
+    <Content Include="Images\WS Main 3.jpg" />
+    <Content Include="Images\ws mini.jpg" />
+    <Content Include="Images\WS Motto.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -309,7 +329,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
     <Folder Include="test\" />
   </ItemGroup>
   <ItemGroup>
