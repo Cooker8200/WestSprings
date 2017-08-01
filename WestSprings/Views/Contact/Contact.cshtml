@@ -35,10 +35,10 @@
                         @Html.ValidationMessageFor(m => m.Name)
                     </div>
                 </div>
-                <div class="form-group" style="resize:both;">
-                    @Html.LabelFor(m => m.Message, new { @class = "col-lg-2 control-label" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Message, new { @class = "col-lg-2 control-label"})
                     <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Message, new { @class = "form-control"})
+                        @Html.TextAreaFor(m => m.Message, new { @class = "form-control", @rows = "5" })
                         @Html.ValidationMessageFor(m => m.Message)
                     </div>
 

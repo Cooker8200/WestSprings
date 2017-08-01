@@ -141,6 +141,22 @@ footer {
     margin-top: 2em;
 }
 
+@media(max-width: 480px){
+    #about_header {
+        text-align: center;
+        padding-top: 4%;
+        font-size: 3em;
+    }
+}
+
+@media(min-width: 481px){
+    #about_header {
+            text-align: center;
+            padding-top: 4%;
+            font-size: 4em;
+    }
+}
+
 #our {
     color: #e6e600;
     display: inline;

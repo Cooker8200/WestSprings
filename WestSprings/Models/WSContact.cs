@@ -16,7 +16,6 @@ namespace WestSprings.Models
 
         }
 
-        [Display(Name = "Send To")]
         public int SendToAddressId { get; set; }
         public IEnumerable<SelectListItem> SendToAddresses { get; set; }
         //[Required]
@@ -38,7 +37,7 @@ namespace WestSprings.Models
 
     public enum Leadership
     {
-        SendTo,
+        
         [Display(Name = "Tim McDonnell")]
         TimMcDonnell,
         [Display(Name = "Justin Brunk")]
