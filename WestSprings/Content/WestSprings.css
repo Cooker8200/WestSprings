@@ -119,7 +119,7 @@ footer {
     font-size: 4em;
 }
 
-.ministries {
+/*.ministries {
     margin-top: 3%;
     display: inline;
     list-style-type: none;
@@ -132,6 +132,32 @@ footer {
     text-align: center;
     border-left: 5px solid black;
     border-right: 5px solid black;
+}*/
+
+#ministries_kids, #ministries_men, #ministries_wow, #ministries_wired {
+    background: white;
+    border: 2px solid black;
+    border-radius: 5%;
+    text-align: center;
+    padding: 2%;
+    font-family: Calibri;
+    color: black;
+}
+
+#ministries_kids_home, #ministries_men_home, #ministries_wow_home, #ministries_wired_home {
+    background: white;
+    border: 2px solid black;
+    border-radius: 5%;
+    text-align: center;
+    padding: 2%;
+    font-family: Calibri;
+    color: black;
+    margin-top: 10em;
+    margin-bottom: 10em;
+}
+
+#ministries_kids:hover, #minitries_men:hover, #ministries_wow:hover, #ministries_wired:hover {
+    color: blue;
 }
 
 .state {
@@ -364,7 +390,7 @@ footer {
 }
 
 #main3 {
-    margin-top: 15%;
+
 }
 
 #main4 {

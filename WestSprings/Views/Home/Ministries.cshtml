@@ -23,13 +23,31 @@
     <img src="~/Images/ministries.png" id="ministryheadpic" />
 </div>*@
 <br />
+    <div class="col-md-3" id="ministries_kids">
+        <h6>Kids Construction Company</h6><br />
+        <img src="~/Images/kids.png" />
+    </div>
+    <div class="col-md-3" id="ministries_wired">
+        <h6>WIRED Studen Ministries</h6><br />
+        <img src="~/Images/wired.png" />
+    </div>
+    <div class="col-md-3" id="ministries_wow">
+        <h6>Women of the Word (W.O.W.)</h6><br />
+        <img src="~/Images/wow.png" />
+    </div>
+    <div class="col-md-3" id="ministries_men">
+        <h6>West Springs Men's Ministry</h6><br />
+        <img src="~/Images/mens.png" />
+    </div>
+    <div style="height: 10em;">
 
-    <ul id="programs">
+    </div>
+    @*<ul id="programs">
         <li class="ministries"><a href="#kids"> <b>Kids Contruction Company</b><img src="~/Images/kids.png" /></a></li>
         <li class="ministries"><a href="#wired"> <b>WIRED Student Ministries</b><img src="~/Images/wired.png" /></a></li>
         <li class="ministries"><a href="#women"> <b>Women of the Word (W.O.W.)</b><img src="~/Images/wow.png" /></a></li>
         <li class="ministries"><a href="#men"> <b>West Springs Men's Ministry</b><img src="~/Images/mens.png" /></a></li>
-    </ul>
+    </ul>*@
 <hr />
 
 <div class="col-md-12" id="kids"></div>
@@ -123,3 +141,5 @@
 </div>
     <div class="col-md-12" id="wired"><a href="#" class="btn btn-primary btn-xs">Back To Top</a></div>
     </div>
+
+@Scripts.Render("~/Scripts/Ministries.js")

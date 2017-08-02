@@ -6,68 +6,44 @@
 <h3 style="text-align: center; margin-bottom:5%;">West Springs Directory</h3>
 
 @using Microsoft.AspNet.Identity
-@if (Request.IsAuthenticated) { }
-@*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<table class="col-md-4" id="indextable">
-    <tr>
-        <th id="tablelable">
-            @Html.DisplayNameFor(model => model.firstname)
-        </th>
-        <th id="tablelable2">
-            @Html.DisplayNameFor(model => model.lastname)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.address)
-        </th>*@
-        @*<th>
-            @Html.DisplayNameFor(model => model.city)
-        </th>*@
-        @*<th>
-            @Html.DisplayNameFor(model => model.state)
-        </th>*@
-        @*<th>
-            @Html.DisplayNameFor(model => model.zipcode)
-        </th>*@
-        @*<th>
-            @Html.DisplayNameFor(model => model.phone)
-        </th>*@
-        <th></th>
-    </tr>
+@if (Request.IsAuthenticated)
+{
 
-@foreach (var item in Model) {
-    <tr>
-        <td id="indexfirstname">
-            @Html.DisplayFor(modelItem => item.firstname)
-        </td>
-        <td id="indexlastname">
-            @Html.DisplayFor(modelItem => item.lastname)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.address)
-        </td>*@
-        @*<td>
-            @Html.DisplayFor(modelItem => item.city)
-        </td>*@
-        @*<td>
-            @Html.DisplayFor(modelItem => item.state)
-        </td>*@
-        @*<td>
-            @Html.DisplayFor(modelItem => item.zipcode)
-        </td>*@
-        @*<td>
-            @Html.DisplayFor(modelItem => item.phone)
-        </td>*@
-        <td>
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.memberid }) |*@
-            @Html.ActionLink("Details", "Details", new { id=item.memberid }) 
-            @*@Html.ActionLink("Delete", "Delete", new { id=item.memberid })*@
-        </td>
-    </tr>
+    <table class="col-md-4" id="indextable">
+        <tr>
+            <th id="tablelable">
+                @Html.DisplayNameFor(model => model.firstname)
+            </th>
+            <th id="tablelable2">
+                @Html.DisplayNameFor(model => model.lastname)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td id="indexfirstname">
+                    @Html.DisplayFor(modelItem => item.firstname)
+                </td>
+                <td id="indexlastname">
+                    @Html.DisplayFor(modelItem => item.lastname)
+                </td>
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id=item.memberid }) |*@
+                    @Html.ActionLink("Details", "Details", new { id = item.memberid })
+                    @*@Html.ActionLink("Delete", "Delete", new { id=item.memberid })*@
+                </td>
+            </tr>
+        }
+
+
+    </table>
+}
+else
+{
+    <h3>You are not worthy!</h3>
 }
 
-</table>
 
 <img id="minipic" src="~/Images/ws mini.jpg" />
 

@@ -41,7 +41,38 @@
     </div>
 
     <div id="main3">
-        <ul id="programshome">
+        <div class="col-md-3" id="ministries_kids_home">
+            <h4>Kids Construction Company</h4><br />
+            <img src="~/Images/kids.png" />
+            <p class="homemini">Our children's ministry aspires to show the love of God to every child in KCC</p>
+            <a class="give2" @Html.ActionLink("Learn More", "Ministries", "Home")</a></p>
+        </div>
+
+        <div class="col-md-3" id="ministries_wired_home">
+            <h4>WIRED Studen Ministries</h4><br />
+            <img src="~/Images/wired.png" />
+            <p class="homemini">
+                WIRED Student Ministry exists to provide a safe, and fun place where Jr. High and High School students know and
+                grow in Christ.
+            </p>
+            <a class="give2" @Html.ActionLink("Learn More", "Ministries", "Home")</a>
+        </div>
+
+        <div class="col-md-3" id="ministries_wow_home">
+            <h4>Women of the Word (W.O.W.)</h4><br />
+            <img src="~/Images/wow.png" />
+            <p class="homemini">The W.O.W Ministry welcomes all women to participate in our various programs and special events.</p>
+            <a class="give2" @Html.ActionLink("Learn More", "Ministries", "Home")</a>
+        </div>
+
+        <div class="col-md-3" id="ministries_men_home">
+            <h4>West Springs Men's Ministry</h4><br />
+            <img src="~/Images/mens.png" />
+            <p class="homemini">This is a growing group of Men wanting to come together to support one another as we learn to be...</p>
+            <a class="give2" @Html.ActionLink("Learn More", "Ministries", "Home")</a>
+        </div>
+
+        @*<ul id="programshome">
             <li class="ministrieshome"><b>Kids Contruction Company</b><img src="~/Images/kids.png" />
             <hr />
             <p class="homemini">Our children's ministry aspires to show the love of God to every child in KCC</p>
@@ -59,7 +90,7 @@
             <hr />
             <p class="homemini">This is a growing group of Men wanting to come together to support one another as we learn to be...</p>
                 <a class="give2" @Html.ActionLink("Learn More", "Ministries", "Home")</a></li>
-        </ul>
+        </ul>*@
     </div>
 
     <div id="main4">
