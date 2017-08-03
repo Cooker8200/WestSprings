@@ -21,6 +21,12 @@ $(window).scroll(function (e) {
     parallax();
 })
 
+$(document).ready(function () {
+    $("#ministries_kids").click(function () {
+        ;
+    })
+})
+
 
 //$(document).ready(function () {
 //    $("#indextable").

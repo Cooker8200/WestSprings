@@ -4,6 +4,10 @@
     ViewBag.Title = "Online Directory";
 }
 
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+
 <h3 style="text-align: center;">Online Directory</h3>
 <hr />
 <div class="col-md-6" id="detials1">
@@ -128,6 +132,7 @@
     @Html.ActionLink("Directory Home", "Index")
 </p>
 
+}
 <script>
     onLoad = document.getElementById('body').style.background = '#ffffff';
 </script>

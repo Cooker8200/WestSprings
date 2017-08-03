@@ -29,6 +29,30 @@ footer {
    /*margin-right: 5%;*/
 }
 
+@media (max-width: 480px){
+    #slide_pic{
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+}
+
+@media (min-width: 481px){
+    #slide_pic{
+        margin-left: auto;
+        margin-right: auto;
+        zoom: 1.5;
+        height: 30em;
+        min-width: 75em;
+    }
+}
+
+/*#slide_pic{
+    margin-left: auto;
+    margin-right: auto;
+
+}*/
+
 /*.slide img {
     width: auto;
     height: auto;
@@ -385,7 +409,7 @@ footer {
 }
 
 #main2 {
-    padding-top: 35%;
+    padding-top: 10%;
 
 }
 

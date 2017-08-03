@@ -4,6 +4,9 @@
     ViewBag.Title = "Delete";
 }
 
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
 <h3 style="text-align: center;">Delete</h3>
 <h4 style="text-align: center;">Directory</h4>
 <hr />
@@ -116,7 +119,8 @@
     </dl>
 </div>
 
-    @using (Html.BeginForm()) {
+    using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="col-md-12" style="text-align: center; font-weight: bold;">
@@ -124,7 +128,9 @@
             @Html.ActionLink("Directory Home", "Index")
         </div>
     }
-</div>
+
+
+}
 
 <script>
     onLoad = document.getElementById('body').style.background = '#ffffff';
